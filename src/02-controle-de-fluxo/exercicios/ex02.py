@@ -1,7 +1,7 @@
 """ Exercício 02 """
 
 notas = input("Digite as notas 1, 2 e 3: ")
-lista_de_notas = notas.split(",")
+lista_de_notas = notas.split(", ")
 
 notas_float = []
 for nota in lista_de_notas:
