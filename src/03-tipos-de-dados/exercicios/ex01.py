@@ -3,12 +3,12 @@
 numeros = input('Digite os números da lista (formato: n1, n2, n3...): ')
 lista_numeros = numeros.split(", ")
 
-numeros_int = []
+numeros_float = []
 for numero in lista_numeros:
-    numeros_int.append(float(numero))
+    numeros_float.append(float(numero))
 
-MAIOR = max(numeros_int, key=int)
-MENOR = min(numeros_int, key=int)
+MAIOR = max(numeros_float, key=float)
+MENOR = min(numeros_float, key=float)
 
 print('O maior número é: ', MAIOR)
 print('O menor número é: ', MENOR)
