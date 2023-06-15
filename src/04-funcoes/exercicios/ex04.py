@@ -1,4 +1,5 @@
 """ Exercício 04 """
+breakpoint()
 
 def soma(*args):
     soma = 0
