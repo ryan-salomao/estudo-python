@@ -2,15 +2,9 @@
 
 
 
-peso = float(input("Digite seu peso em (Kg): ")) 
-
-
-altura = float(input("Digite sua altura em (m): "))
-
-
 individuo = {
-    'altura': altura,
-    'peso': peso
+    'altura': float(input("Digite seu peso em (Kg): ")),
+    'peso': float(input("Digite sua altura em (m): "))
 }
 
 
@@ -22,6 +16,7 @@ def calcular_imc(individuo):
 
 
     IMC = peso / (altura * altura)
+    
     return IMC
 
 

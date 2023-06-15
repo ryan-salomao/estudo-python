@@ -1,33 +1,22 @@
 """ Exercício 06 """
 
 
-COMPRIMENTO = float(input('Digite o comprimento do aquário em (cm): '))
-
-ALTURA = float(input('Digite a altura do aquário em (cm): '))
-
-LARGURA = float(input('Digite a largura do aquário em (cm): '))
-
-TEMPERATURA_AMBIENTE = float(input('Digite a temperatura do ambiente em (graus Cº): '))
-
-TEMPERATURA_DESEJADA = float(input('Digite a temperatura desejada do aquário em (graus Cº): '))
-
-
 aquario = {
 
-    'comprimento': COMPRIMENTO,
+    'comprimento': float(input('Digite o comprimento do aquário em (cm): ')),
 
-    'altura': ALTURA,
+    'altura': float(input('Digite a altura do aquário em (cm): ')),
 
-    'largura': LARGURA
+    'largura': float(input('Digite a largura do aquário em (cm): '))
 
 }
 
 
 termostato = {
 
-    'temperatura_ambiente': TEMPERATURA_AMBIENTE,
+    'temperatura_ambiente': float(input('Digite a temperatura do ambiente em (graus Cº): ')),
 
-    'temperatura_desejada': TEMPERATURA_DESEJADA
+    'temperatura_desejada': float(input('Digite a temperatura desejada do aquário em (graus Cº): '))
 
 }
 
