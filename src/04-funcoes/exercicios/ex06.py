@@ -75,17 +75,13 @@ def quantidade_filtragem(volume):
     """ calcula o mínimo de filtragem necessária para o aquário """
 
 
-
-    min = volume * 2
-
+    minimo = volume * 2
 
 
-    max = volume * 3
+    maximo = volume * 3
 
 
-
-    filtragem = f'mínimo de {min} a {max} Litros'
-
+    filtragem = f'mínimo de {minimo} a {maximo} Litros'
 
 
 
