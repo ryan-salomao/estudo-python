@@ -8,7 +8,7 @@ def carregar_dados_projetos(arquivo):
         dados_projetos = []
 
         for linha in arq:
-            dados_projeto = linha.split(sep=',')
+            dados_projeto = linha.strip().split(sep=',')
 
             dicionario_dados_projeto = {
                 'codigo': int(dados_projeto[0]),

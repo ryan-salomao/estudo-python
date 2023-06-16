@@ -7,7 +7,7 @@ def carregar_dados_alunos(arquivo):
         dados_alunos = []
 
         for linha in arq:
-            dados_aluno = linha.split(sep=',')
+            dados_aluno = linha.strip().split(sep=',')
             dicionario_dados_aluno = {
                 'prontuario': dados_aluno[0],
                 'nome': dados_aluno[1],
