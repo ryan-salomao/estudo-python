@@ -1,0 +1,4 @@
+banana,12
+maçã,5
+pera,3
+melancia,1
