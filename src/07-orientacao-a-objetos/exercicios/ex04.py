@@ -1,11 +1,12 @@
 """ Exercício 04 """
 
+
 class Aluno:
     def __init__(self, prontuario, nome, email):
         self.prontuario = prontuario
         self.nome = nome
         self.email = email
-    
+
     @property
     def prontuario(self):
         return self._prontuario
@@ -50,10 +51,12 @@ class Aluno:
         return hash(self.prontuario)
 
     def __str__(self):
-        return f'Aluno[prontuario={self.prontuario}, nome={self.nome}, email={self.email}]'
+        return (
+            f"Aluno[prontuario={self.prontuario}, nome={self.nome}, email={self.email}]"
+        )
 
     def __repr__(self):
-        return f'Aluno({self.prontuario},{self.nome},{self.email})'
+        return f"Aluno({self.prontuario},{self.nome},{self.email})"
 
 
 class Projeto:
@@ -62,7 +65,7 @@ class Projeto:
         self.titulo = titulo
         self.responsavel = responsavel
         self.participacoes = []
-    
+
     @property
     def codigo(self):
         return self._codigo
@@ -70,7 +73,9 @@ class Projeto:
     @codigo.setter
     def codigo(self, value):
         if value <= 0 or not value:
-            raise ValueError("O codigo não pode ser vazio ou nulo (códigos devem ser maior que 0)")
+            raise ValueError(
+                "O codigo não pode ser vazio ou nulo (códigos devem ser maior que 0)"
+            )
         self._codigo = value
 
     @property
@@ -117,10 +122,10 @@ class Projeto:
         return hash(self.codigo)
 
     def __str__(self):
-        return f'Projeto[codigo={self.codigo}, titulo={self.titulo}, responsavel={self.responsavel}]'
+        return f"Projeto[codigo={self.codigo}, titulo={self.titulo}, responsavel={self.responsavel}]"
 
     def __repr__(self):
-        return f'Projeto({self.codigo},{self.titulo},{self.responsavel})'
+        return f"Projeto({self.codigo},{self.titulo},{self.responsavel})"
 
 
 class Participacao:
@@ -130,7 +135,7 @@ class Participacao:
         self.data_fim = data_fim
         self.aluno = aluno
         self.projeto = projeto
-    
+
     @property
     def codigo(self):
         return self._codigo
@@ -138,7 +143,9 @@ class Participacao:
     @codigo.setter
     def codigo(self, value):
         if value <= 0 or not value:
-            raise ValueError("O codigo não pode ser vazio ou nulo (códigos devem ser maior que 0)")
+            raise ValueError(
+                "O codigo não pode ser vazio ou nulo (códigos devem ser maior que 0)"
+            )
         self._codigo = value
 
     @property
@@ -170,19 +177,19 @@ class Participacao:
         return hash(self.codigo)
 
     def __str__(self):
-        return f'Participacao[codigo={self.codigo}, data_inicio={self.data_inicio}, data_fim={self.data_fim}, aluno={self.aluno}, projeto={self.projeto}]'
+        return f"Participacao[codigo={self.codigo}, data_inicio={self.data_inicio}, data_fim={self.data_fim}, aluno={self.aluno}, projeto={self.projeto}]"
 
     def __repr__(self):
-        return f'Participacao({self.codigo},{self.data_inicio},{self.data_fim},{self.aluno},{self.projeto})'
+        return f"Participacao({self.codigo},{self.data_inicio},{self.data_fim},{self.aluno},{self.projeto})"
 
 
-aluno1 = Aluno('SP010101', 'Joãoxinho', 'jaum@email')
+aluno1 = Aluno("SP010101", "Joãoxinho", "jaum@email")
 
-projeto1 = Projeto(1, 'Laboratório de Desenvolvimento de Software', 'Pedro Gomes')
+projeto1 = Projeto(1, "Laboratório de Desenvolvimento de Software", "Pedro Gomes")
 
 participacao1 = Participacao(1, "22/05/2023", "07/09/2023", aluno1, projeto1)
 
 projeto1.add_participacao(participacao1)
 
-print(projeto1.print_participacoes())
 
+projeto1.print_participacoes()
