@@ -12,7 +12,7 @@ class Aluno:
 
     @prontuario.setter
     def prontuario(self, value):
-        if value == " " or value == "":
+        if value == " " or not value:
             raise ValueError("O prontuario não pode ser vazio ou nulo")
         self._prontuario = value
 
@@ -22,7 +22,7 @@ class Aluno:
 
     @nome.setter
     def nome(self, value):
-        if value == " " or value == "":
+        if value == " " or not value:
             raise ValueError("O nome não pode ser vazio ou nulo")
         self._nome = value
 
@@ -32,7 +32,7 @@ class Aluno:
 
     @email.setter
     def email(self, value):
-        if value == " " or value == "":
+        if value == " " or not value:
             raise ValueError("O email não pode ser vazio ou nulo")
         self._email = value
 
@@ -57,7 +57,8 @@ class Aluno:
 
 
 aluno1 = Aluno('SP010101', 'Joãoxinho', 'jaum@email')
-aluno2 = Aluno.from_string("SP020202,Xorginho,xorge@email.com")
+aluno2 = Aluno.from_string("SP010101,Xorginho,xorge@email.com")
 
 print(aluno1)
 print(aluno2)
+print(aluno1 == aluno2)
