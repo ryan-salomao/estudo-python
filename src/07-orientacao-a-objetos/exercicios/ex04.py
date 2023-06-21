@@ -106,13 +106,6 @@ class Projeto:
     def add_participacao(self, participacao):
         self.participacoes.append(participacao)
 
-    def print_participacoes(self):
-        print("Participações do Projeto:", self.titulo)
-        if len(self.participacoes) > 0:
-            print(len(self.participacoes))
-        else:
-            print("Nenhuma participação")
-
     def __eq__(self, value):
         if isinstance(value, self.__class__):
             return self.codigo == value.codigo
@@ -122,10 +115,10 @@ class Projeto:
         return hash(self.codigo)
 
     def __str__(self):
-        return f"Projeto[codigo={self.codigo}, titulo={self.titulo}, responsavel={self.responsavel}]"
+        return f"Projeto[codigo={self.codigo}, titulo={self.titulo}, responsavel={self.responsavel}, participacoes={len(self.participacoes)}]"
 
     def __repr__(self):
-        return f"Projeto({self.codigo},{self.titulo},{self.responsavel})"
+        return f"Projeto({self.codigo},{self.titulo},{self.responsavel},{len(self.participacoes)})"
 
 
 class Participacao:
@@ -192,4 +185,4 @@ participacao1 = Participacao(1, "22/05/2023", "07/09/2023", aluno1, projeto1)
 projeto1.add_participacao(participacao1)
 
 
-projeto1.print_participacoes()
+print("\n", projeto1, "\n")
