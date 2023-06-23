@@ -1,5 +1,6 @@
 """ Classe Projeto """
 
+
 class Projeto:
     def __init__(self, codigo, titulo, responsavel):
         self.codigo = codigo

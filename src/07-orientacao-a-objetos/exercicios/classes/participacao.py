@@ -1,5 +1,6 @@
 """ Classe Participacao """
 
+
 class Participacao:
     def __init__(self, codigo, data_inicio, data_fim, aluno, projeto):
         self.codigo = codigo

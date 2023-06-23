@@ -1,11 +1,12 @@
 """ Classe Aluno """
 
+
 class Aluno:
     def __init__(self, prontuario, nome, email):
         self.prontuario = prontuario
         self.nome = nome
         self.email = email
-    
+
     @property
     def prontuario(self):
         return self._prontuario
@@ -50,7 +51,9 @@ class Aluno:
         return hash(self.prontuario)
 
     def __str__(self):
-        return f'Aluno[prontuario={self.prontuario}, nome={self.nome}, email={self.email}]'
+        return (
+            f"Aluno[prontuario={self.prontuario}, nome={self.nome}, email={self.email}]"
+        )
 
     def __repr__(self):
-        return f'Aluno({self.prontuario},{self.nome},{self.email})'
+        return f"Aluno({self.prontuario},{self.nome},{self.email})"
