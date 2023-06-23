@@ -1,4 +1,5 @@
 """ Aula 01 - Introdução a Orientação a objetos """
+from classes_aula.retangulo import Retangulo
 
 # paradigma de programação
 
@@ -35,17 +36,6 @@ print(calcular_perimetro(retangulo2))
 # Classe representa um retangulo
 # Classe possui atributos base e altura
 # Classe possui métodos (função dentro da classe)
-class Retangulo:
-    def __init__(self, base, altura):
-        self.base = base
-        self.altura = altura
-
-    def calcular_area(self):
-        return self.base * self.altura
-
-    def calcular_perimetro(self):
-        return 2 * (self.base + self.altura)
-
 
 # Instanciando objetos do tipo Retangulo
 # Chamando o método construtor

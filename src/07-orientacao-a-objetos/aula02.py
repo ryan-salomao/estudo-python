@@ -1,6 +1,5 @@
 """ Aula 02 - Atributos de classe e instância """
 
-
 # classe pessoa possui
 # atributos de instancia: nome e email
 # atributos de classe: especie
